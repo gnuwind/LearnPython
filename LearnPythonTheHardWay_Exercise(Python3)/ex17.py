@@ -12,7 +12,7 @@ indata = in_file.read()
 
 print ("The input file is %d characters long" % len(indata))
 
-print ("Does the output file exists? %r", exists(to_file))
+print ("Does the output file exists? %r" % exists(to_file))
 print ("Ready, hit RETURN to continue, CTRL-C(^C) to abort.")
 input ()
 
