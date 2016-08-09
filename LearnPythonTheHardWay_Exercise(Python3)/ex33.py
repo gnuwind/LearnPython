@@ -6,11 +6,11 @@ while i < 6:
     numbers.append(i)
 
     i = i + 1
-    print ("Numbers now: ", numbers)
-    print ("At the bottom i is %d\n" % i)
+    print("Numbers now: ", numbers)
+    print("At the bottom i is %d\n" % i)
 
-print ("The numbers: ")
+print("The numbers: ")
 
 for num in numbers:
-    print (num)
+    print(num)
 

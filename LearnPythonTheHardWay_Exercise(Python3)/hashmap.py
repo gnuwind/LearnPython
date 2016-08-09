@@ -5,15 +5,18 @@ def new(num_buckets=256):
         aMap.append([])
     return aMap
 
+
 def hash_key(aMap, key):
-    """Given a key this will create a number and then convert it to 
+    """Given a key this will create a number and then convert it to
     an index for the aMap's buckets."""
     return hash(key) % len(aMap)
+
 
 def get_bucket(aMap, key):
     """Given a key, find the bucket where it world go."""
     bucket_id = hash_key(aMap, key)
     return aMap[bucket_id]
+
 
 def get_slot(aMap, key, default=None):
     """
@@ -29,10 +32,12 @@ def get_slot(aMap, key, default=None):
 
     return -1, key, default
 
+
 def get(aMap, key, default=None):
     """Gets the value in a bucket for the given key, or the defalut."""
     i, k, v = get_slot(aMap, key, default=default)
     return v
+
 
 def set(aMap, key, value):
     """Sets the key to the value, replacing any existing value."""
@@ -46,15 +51,17 @@ def set(aMap, key, value):
         # the key does not, append to create it
         bucket.append((key, value))
 
+
 def delete(aMap, key):
     """Deletes the given key from the Map."""
     bucket = get_bucket(aMap, key)
 
-    for i in xrange(len(bucket)):
+    for i in range(len(bucket)):
         k, v = bucket[i]
         if key == k:
             del bucket[i]
             break
+
 
 def list(aMap):
     """Prints out what's in the Map."""
@@ -62,7 +69,3 @@ def list(aMap):
         if bucket:
             for k, v in bucket:
                 print(k, v)
-
-
-
-

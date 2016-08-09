@@ -1,5 +1,5 @@
-print ("Let's practice everything.")
-print ('You\'d need to know \'bout escapes with \\ that do \n newlines and \t tabs.')
+print("Let's practice everything.")
+print('You\'d need to know \'bout escapes with \\ that do \n newlines and \t tabs.')
 
 poem = """
 \t The lovely world
@@ -10,12 +10,12 @@ and requires an explanation
 \n\t\twhere there is none.
 """
 
-print ("----------------")
-print (poem)
-print ("----------------")
+print("----------------")
+print(poem)
+print("----------------")
 
 five = 10 - 2 + 3 - 6
-print ("This should be five: %s" % five)
+print("This should be five: %s" % five)
 
 def secret_formula(started):
     jelly_beans = started * 500
@@ -26,13 +26,13 @@ def secret_formula(started):
 start_point = 10000
 beans, jars, crates = secret_formula(start_point)
 
-print ("With a starting point of: %d" % start_point)
-print ("We'd have %d beans, %d jars, and %d crates." % (beans, jars, crates))
+print("With a starting point of: %d" % start_point)
+print("We'd have %d beans, %d jars, and %d crates." % (beans, jars, crates))
 
 start_point = start_point / 10
 
-print ("We can also do that this way:")
-print ("We'd have %d beans, %d jars, and %d crates." % secret_formula(start_point))
+print("We can also do that this way:")
+print("We'd have %d beans, %d jars, and %d crates." % secret_formula(start_point))
 
 
 def add_and_sub(a, b):
@@ -40,5 +40,5 @@ def add_and_sub(a, b):
     difference = a - b
     return summation, difference
 
-print ("The sum is: %d, and the diff is: %d" % add_and_sub(10, 2))
+print("The sum is: %d, and the diff is: %d" % add_and_sub(10, 2))
 
