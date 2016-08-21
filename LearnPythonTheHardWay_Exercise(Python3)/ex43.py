@@ -67,7 +67,7 @@ class CentralCorridor(Scene):
             print("your head and eats you.")
             return 'death'
 
-        elif action == "tell a joke":
+        elif action == "tell a joke" or "pass":
             print("Lucky for you they made you learn Gothon insults in the academy.")
             print("You tell the one Gothon joke you know:")
             print("Lbhe zbgure vf fb sng, jura fur fvgf nebhaq gur ubhfr, fur fvgf nebhaq gur ubhfr.")
@@ -94,12 +94,12 @@ class LaserWeaponArmory(Scene):
         guess = input("[keypad]> ")
         guesses = 0
 
-        while guess != code and guesses < 10:
+        while guess != code and guesses < 10 and guess != "pass":
                 print("BZZZZEDDD!")
                 guesses += 1
                 guess = input("[keypad]> ")
 
-        if guess == code:
+        if guess == code or "pass":
             print("The container clicks open and the seal breaks, letting gas out.")
             print("You grab the neutron bomb and run as fast as you can to the")
             print("bridge where you must place it in the right spot.")
